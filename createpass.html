@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Password</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create Password</h2>
+    <p>Your registration was successful. Now, you need to create a password to complete your signup process.</p>
+    <form method="POST" action="passwor.php">
+      <label for="roll_no">Roll No:</label>
+      <input type="text" id="roll_no" name="roll_no" required>
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password" required>
+      
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="text" id="cpassword" name="cpassword" required>
+      
+      <input type="submit" name="submit" id="submit" value="Create">
+    </form>
+  </div>
+</body>
+</html>

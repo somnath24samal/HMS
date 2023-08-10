@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Requests</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .grant-btn, .decline-btn {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .decline-btn {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Requests</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Request</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>Leave for vacation</td>
+        <td>
+          <button class="grant-btn">Grant</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Permission to attend conference</td>
+        <td>
+          <button class="grant-btn">Grant</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+      <!-- Add more rows for additional requests -->
+    </tbody>
+  </table>
+
+  <script>
+    const grantButtons = document.querySelectorAll('.grant-btn');
+    const declineButtons = document.querySelectorAll('.decline-btn');
+
+    function grantRequest() {
+  const row = this.parentNode.parentNode;
+  row.style.backgroundColor = '#4CAF50'; // Example: Highlight the row
+  row.remove(); // Remove the row from the table
+}
+
+function declineRequest() {
+  const row = this.parentNode.parentNode;
+  row.style.backgroundColor = '#f44336'; // Example: Highlight the row
+  row.remove(); // Remove the row from the table
+}
+
+    // Attach event listeners to grant buttons
+    grantButtons.forEach(button => {
+      button.addEventListener('click', grantRequest);
+    });
+
+    // Attach event listeners to decline buttons
+    declineButtons.forEach(button => {
+      button.addEventListener('click', declineRequest);
+    });
+  </script>
+</body>
+</html>

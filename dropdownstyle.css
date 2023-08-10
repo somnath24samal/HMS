@@ -1,0 +1,76 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(https://d2ah634u9nypif.cloudfront.net/wp-content/uploads/2019/01/nalco-banner.jpg);
+    background-size: cover ;
+    width: 100%;
+    height: 50vh;
+    font-family: sans-serif;
+}
+
+.Menubar{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.Menubar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.Menubar ul li
+{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.Menubar ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+.active, .Menubar ul li a :hover
+{
+    background: red;
+    border-radius: 3px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.Menubar ul li a :hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.Menubar ul li a :hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+
+.Menubar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.Menubar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.Menubar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: aquamarine;
+}
